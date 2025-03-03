@@ -1,15 +1,13 @@
-const siteUrl = "https://seu-usuario.github.io/health-calculator/";
-
 # Health Calculator
 
 ## 🌐 Idiomas / Languages 
 
-- 🇧🇷 [Português Brasileiro](#-pt-br)
-- 🇺🇸 [English](#-english)
-- 🇪🇸 [Español](#-español)
-- 🇫🇷 [Français](#-français)
+- <button onclick="toggleSection('pt-br')">🇧🇷 Português Brasileiro</button>
+- <button onclick="toggleSection('english')">🇺🇸 English</button>
+- <button onclick="toggleSection('espanol')">🇪🇸 Español</button>
+- <button onclick="toggleSection('francais')">🇫🇷 Français</button>
 
----
+<div id="pt-br" style="display:block;">
 
 ## 🇧🇷 PT-BR
 
@@ -37,7 +35,7 @@ O **Health Calculator** é uma aplicação web que permite aos usuários calcula
 
 ### Como Usar
 
-1. Acesse o site online: [Health Calculator](${siteUrl})
+1. Acesse o site online: [Health Calculator](https://seu-usuario.github.io/health-calculator/)
 2. Insira seu peso na aplicação.
 3. O site calculará automaticamente a quantidade de água que você deve consumir diariamente e seu IMC.
 
@@ -45,8 +43,9 @@ O **Health Calculator** é uma aplicação web que permite aos usuários calcula
 
 1. [Saulo Ferro Maciel](https://br.linkedin.com/in/saulo-ferro-maciel-74b65a1b8)
 2. [Tereza Raquel Garrido](https://br.linkedin.com/in/tereza-raquel-346b761a9)
+</div>
 
----
+<div id="english" style="display:none;">
 
 ## 🇺🇸 English
 
@@ -74,7 +73,7 @@ The **Health Calculator** is a web application that allows users to calculate th
 
 ### How to Use
 
-1. Access the online site: [Health Calculator](${siteUrl})
+1. Access the online site: [Health Calculator](https://seu-usuario.github.io/health-calculator/)
 2. Enter your weight in the application.
 3. The site will automatically calculate the amount of water you should drink daily and your BMI.
 
@@ -82,8 +81,9 @@ The **Health Calculator** is a web application that allows users to calculate th
 
 1. [Saulo Ferro Maciel](https://linkedin.com/in/saulo-ferro-maciel-74b65a1b8)
 2. [Tereza Raquel Garrido](https://linkedin.com/in/tereza-raquel-346b761a9)
+</div>
 
----
+<div id="espanol" style="display:none;">
 
 ## 🇪🇸 Español
 
@@ -111,7 +111,7 @@ El **Health Calculator** es una aplicación web que permite a los usuarios calcu
 
 ### Cómo Usar
 
-1. Accede al sitio en línea: [Health Calculator](${siteUrl})
+1. Accede al sitio en línea: [Health Calculator](https://seu-usuario.github.io/health-calculator/)
 2. Ingresa tu peso en la aplicación.
 3. El sitio calculará automáticamente la cantidad de agua que debes consumir diariamente y tu IMC.
 
@@ -119,40 +119,11 @@ El **Health Calculator** es una aplicación web que permite a los usuarios calcu
 
 1. [Saulo Ferro Maciel](https://linkedin.com/in/saulo-ferro-maciel-74b65a1b8)
 2. [Tereza Raquel Garrido](https://linkedin.com/in/tereza-raquel-346b761a9)
+</div>
 
----
-
-## 🇫🇷 Français
-
-Bienvenue sur le projet **Health Calculator** ! Il s'agit d'un site Web en une seule page développé dans le but d'apprendre le design Web et les outils de développement collaboratif comme GitHub. Le site mesure le poids, calcule l'IMC et la quantité d'eau qu'une personne doit consommer quotidiennement.
-
-### Description du Projet
-
-Le **Health Calculator** est une application Web qui permet aux utilisateurs de calculer la quantité idéale d'eau qu'ils doivent boire quotidiennement en fonction de leur poids et de calculer également leur IMC (Indice de Masse Corporelle). Ce projet a été créé pour pratiquer les compétences de design et de développement, ainsi que pour explorer l'utilisation de GitHub pour le contrôle de version et la collaboration. Le site est hébergé sur GitHub Pages, le rendant accessible à tous.
-
-### Technologies Utilisées
-
-- HTML
-- CSS
-- JavaScript
-- Git et GitHub
-- GitHub Pages
-
-### Fonctionnalités
-
-- Calcul de la quantité d'eau nécessaire en fonction du poids de l'utilisateur
-- Calcul de l'IMC (Indice de Masse Corporelle)
-- Interface réactive et conviviale
-- Design simple et intuitif
-- Accès en ligne via GitHub Pages
-
-### Comment Utiliser
-
-1. Accédez au site en ligne : [Health Calculator](${siteUrl})
-2. Entrez votre poids dans l'application.
-3. Le site calculera automatiquement la quantité d'eau que vous devez boire quotidiennement et votre IMC.
-
-### Contributeurs
-
-1. [Saulo Ferro Maciel](https://linkedin.com/in/saulo-ferro-maciel-74b65a1b8)
-2. [Tereza Raquel Garrido](https://linkedin.com/in/tereza-raquel-346b761a9)
+<script>
+function toggleSection(id) {
+    document.querySelectorAll('div[id]').forEach(div => div.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+</script>
