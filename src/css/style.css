@@ -1,1 +1,55 @@
-
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8%;
+    margin-right: 9%;
+    margin-top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+  
+.logo {
+    width: 8%;
+    opacity: 0.7;
+}
+  
+.title-container {
+    display: flex;
+    flex-direction: column;
+}
+  
+.title-Page {
+    margin: 0;
+}
+  
+.button-container {
+    display: flex;
+    gap: 8px;
+    margin-left: 10px;
+}
+  
+.button {
+    padding: 8px 12px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.imc-button {
+    background-color: #4CAF50;
+}
+  
+.water-button {
+    background-color: #2196F3;
+}
