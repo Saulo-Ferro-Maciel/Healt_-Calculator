@@ -53,3 +53,32 @@
 .water-button {
     background-color: #2196F3;
 }
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #050505; 
+    margin-left: 35%; margin-right: 35%;
+}
+  
+.footer-content {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 2px; 
+}
+  
+.footer-year {
+    margin-right: 10px; 
+    align-items: center;
+    text-align: center;
+}
+  
+.footer-names {
+    display: flex;
+    flex-direction: column; /* Nomes um abaixo do outro */
+    justify-content: space-between; /* Distribuí os nomes para ocupar o espaço disponível */
+    width: 200px; /* Ajuste este valor para controlar a largura dos nomes */
+    text-align: justify; /* Justifica o texto dentro dos spans, se necessário */
+}
