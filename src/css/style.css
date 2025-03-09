@@ -153,9 +153,11 @@
 .footer {
     padding: 5px;
     text-align: center;
-    border-top: 1px solid #050505;
     margin-left: 35%;
     margin-right: 35%;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
 }
 
 .footer-content {
