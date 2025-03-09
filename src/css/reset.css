@@ -12,3 +12,16 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* Remove os spinners em navegadores WebKit (Chrome, Edge, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; /* Remove qualquer margem padrão */
+}
+
+/* Remove os spinners no Firefox */
+input[type="number"] {
+    -moz-appearance: textfield; /* Faz o campo parecer um texto normal */
+}

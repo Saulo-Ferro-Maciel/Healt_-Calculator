@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Health Calculator</title>
-        <link 
-            rel="shortcut icon" 
-            type="image/x-icon" 
-            href="./src/img/logo.png"
-            id="icone" 
-        />
-        <!-- Google Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link 
-            href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&family=Raleway:wght@300;500&family=Ubuntu&family=Ubuntu+Mono&display=swap"
-            rel="stylesheet"
-        />
-        <!-- Font Awesome -->
-        <link 
-            rel="stylesheet" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
-            crossorigin="anonymous" 
-            referrerpolicy="no-referrer" 
-        />
-        <!-- CSS -->
-        <link rel="stylesheet" href="./src/css/reset.css"/>
-        <link rel="stylesheet" href="./src/css/style.css"/>
-        <link rel="stylesheet" href="./src/css/responsive.css"/>
-        <!-- JS -->
-        <script defer  src="./src/js/main.js" ></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Health Calculator</title>
+      <link 
+          rel="shortcut icon" 
+          type="image/x-icon" 
+          href="./src/img/logo.png"
+          id="icone" 
+      />
+      <!-- Google Fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+      <link 
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&family=Raleway:wght@300;500&family=Ubuntu&family=Ubuntu+Mono&display=swap"
+        rel="stylesheet"
+      />
+      <!-- Font Awesome -->
+      <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+      />
+      <!-- Animate CSS Online -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+      <!-- CSS -->
+      <link rel="stylesheet" href="./src/css/reset.css"/>
+      <link rel="stylesheet" href="./src/css/style.css"/>
+      <link rel="stylesheet" href="./src/css/responsive.css"/>
+      <!-- JS -->
+      <script defer type="module" src="./src/js/main.js" ></script>
         
     </head>
     <body>
@@ -51,10 +56,16 @@
 
       <div class="shape">
         <div class="window">
-          <h1 class="title-shape">Calculadora IMC</h1>
-          <input type="number" class="text-field" placeholder="Peso (kg)" id="weight">
-          <input type="number" class="text-field" placeholder="Altura (m)" id="height">
+          <h1 class="title-shape1" style="margin-top: 8%;">Calculadora IMC</h1>
+          <input type="number" class="text-field imc-text-field1" placeholder="Peso (kg)" id="weight">
+          <input type="number" class="text-field imc-text-field2" placeholder="Altura (m)" id="height">
           <button class="button my-imc-button">Calcule meu IMC</button>
+        </div>
+        <div class="window2">
+          <h1 class="title-shape2" style="margin-top: 8%;">Calculadora de Água por dia</h1>
+          <input type="number" class="text-field water-text-field1" placeholder="Peso (kg)" id="weight">
+          <input type="number" class="text-field water-text-field2" placeholder="Altura (m)" id="height">
+          <button class="button my-water-button">Calcule quantidade de água que preciso</button>
         </div>
       </div>
         

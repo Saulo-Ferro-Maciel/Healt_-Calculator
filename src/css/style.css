@@ -46,11 +46,12 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.5s ease;
 }
 
 .button.clicked {
     background-color: transparent;
-  }
+}
 
 .imc-button {
     background-color: #4CAF50;
@@ -70,23 +71,39 @@
     margin-top: 80px; 
 }
 
-.window {
-    width: 500px;
+.window,
+.window2 {
+    width: 400px;
     height: 300px;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
+    border-radius: 25px;
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 25px;
+    text-align: center;
 }
 
-.title-shape {
-    margin: 0 0 20px 0; 
-    font-size: 24px; 
-    color: #333; 
+.window2{
+    display: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.title-shape1,
+.title-shape2 { 
+    font-size: 24px;
+}
+
+.title-shape1{
+    color: #4CAF50;
+}
+.title-shape2{
+    color:#2196F3;
 }
 
 .text-field {
@@ -94,13 +111,20 @@
     padding: 10px;
     margin: 10px 0; 
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 16px;
     outline: none;
+    background-color: rgba(255, 255, 255, 0.658);
 }
 
-.text-field:focus {
+.imc-text-field1:focus,
+.imc-text-field2:focus {
     border-color: #4CAF50; /* Cor de destaque ao focar */
+}
+
+.water-text-field1:focus,
+.water-text-field2:focus{
+    border-color:#2196F3;
 }
 
 .my-imc-button {
@@ -111,8 +135,18 @@
     border-radius: 5px;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+}
+
+.my-water-button {
+    margin-top: 3%;
+    background-color: #2196F3;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
   
 /* Footer */
 .footer {
