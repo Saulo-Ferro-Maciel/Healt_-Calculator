@@ -71,10 +71,16 @@
     margin-top: 80px; 
 }
 
+.title-shape1,
+.title-shape2 { 
+    font-size: 24px;
+    margin-top: 8%;
+}
+
 .window,
 .window2 {
-    width: 400px;
-    height: 300px;
+    width: 340px;
+    height: 250px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 25px;
     display: flex;
@@ -92,11 +98,6 @@
 
 .hidden {
     display: none !important;
-}
-
-.title-shape1,
-.title-shape2 { 
-    font-size: 24px;
 }
 
 .title-shape1{
