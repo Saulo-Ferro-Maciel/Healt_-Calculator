@@ -28,7 +28,7 @@ O **Health Calculator** é uma aplicação web que permite aos usuários calcula
 
 ### Como Usar
 
-1. Acesse o site online: [Health Calculator](https://seu-usuario.github.io/health-calculator/)
+1. Acesse o site online: [Health Calculator](https://saulo-ferro-maciel.github.io/Health-Calculator/)
 2. Insira seu peso na aplicação.
 3. O site calculará automaticamente a quantidade de água que você deve consumir diariamente e seu IMC.
 
@@ -68,7 +68,7 @@ The **Health Calculator** is a web application that allows users to calculate th
 
 ### How to Use
 
-1. Access the online site: [Health Calculator](https://seu-usuario.github.io/health-calculator/)
+1. Access the online site: [Health Calculator](https://saulo-ferro-maciel.github.io/Health-Calculator/)
 2. Enter your weight in the application.
 3. The site will automatically calculate the amount of water you should drink daily and your BMI.
 
@@ -108,7 +108,7 @@ El **Health Calculator** es una aplicación web que permite a los usuarios calcu
 
 ### Cómo Usar
 
-1. Accede al sitio en línea: [Health Calculator](https://seu-usuario.github.io/health-calculator/)
+1. Accede al sitio en línea: [Health Calculator](https://saulo-ferro-maciel.github.io/Health-Calculator/)
 2. Ingresa tu peso en la aplicación.
 3. El sitio calculará automáticamente la cantidad de agua que debes consumir diariamente y tu IMC.
 
