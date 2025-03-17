@@ -19,10 +19,16 @@ function animarJanelas(janelaMostrar) {
         }
         
         setTimeout(() => {
+            // Esconde win2
             win2.classList.add("hidden");
-            win2.style.display="block";
+            win2.style.visibility = "hidden";
+            win2.style.display = "none";
+
+            // Exibe win1
             win1.classList.remove("hidden");
-            win1.style.display = 'block';
+            win1.style.visibility = "visible";
+            win1.style.display = "block";
+            win1.style.position = "relative"; // Garante alinhamento correto
             win1.classList.add("animate__animated", "animate__fadeInLeft");
         }, 500);
     } 
@@ -33,10 +39,16 @@ function animarJanelas(janelaMostrar) {
         }
         
         setTimeout(() => {
+            // Esconde win1
             win1.classList.add("hidden");
-            win1.style.display="none";
+            win1.style.visibility = "hidden";
+            win1.style.display = "none";
+
+            // Exibe win2
             win2.classList.remove("hidden");
-            win2.style.display = 'block';
+            win2.style.visibility = "visible";
+            win2.style.display = "block";
+            win2.style.position = "relative"; // Garante alinhamento correto
             win2.classList.add("animate__animated", "animate__fadeInRight");
         }, 500);
     }
@@ -58,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     waterButton.addEventListener("click", function () {
+        this.classList.toggle('clicked');
         console.log("Botão Água clicado!");
         animarJanelas("water");
     });

@@ -1,3 +1,4 @@
+/* Media Queries */
 @media screen and (max-width: 880px) {
     .logo {
         width: 18%;
@@ -14,10 +15,12 @@
 }
 
 @media screen and (max-width: 480px) {
-    .header{
+    .header {
         margin-top: 3%;
         left: 4%;
-        right: 5%;
+        right: 4%;
+        max-width: 92%; /* Ajustando para garantir que o header se ajuste corretamente */
+        width: 92%; /* Garantir que o header ocupe 92% da tela sem distorcer */
     }
     .logo {
         width: 30%;
@@ -38,6 +41,9 @@
 }
 
 @media screen and (max-width: 398px) {
+    .water-button {
+        padding: 12px 18px;
+    }
     .header {
         width: 87%;
         margin: 0 auto;
@@ -49,7 +55,7 @@
     .logo {
         width: 30%;
     }
-    .window,.window2{
+    .window, .window2 {
         width: 320px;
     }
 }

@@ -1,21 +1,4 @@
 /* Header */
-.header {
-    position: fixed;
-    top: 0;
-    left: 8%;
-    right: 9%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Garante que o header fique acima do conteúdo */
-    min-height: 60px;
-}
-
 .logo-container {
     display: flex;
     align-items: center;
@@ -60,6 +43,24 @@
 
 .water-button {
     background-color: #2196F3;
+    transition: background-color 0.3s ease;
+}
+.header {
+    position: fixed;
+    top: 1.8%;
+    left: 8%;
+    right: 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    height: 80px; /* Altura fixa para evitar distorções */
+    box-sizing: border-box;
+    transition: none; /* Para suavizar a transição da largura */
 }
 
 /* Shape (Conteúdo central) */
@@ -68,8 +69,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(90vh - 90px); /* Ajusta a altura considerando header e footer */
-    margin-top: 80px; 
+    min-height: 300px; /* Ajusta a altura considerando header e footer */
+    margin-top: 80px;
 }
 
 .title-shape1,
@@ -93,21 +94,20 @@
     text-align: center;
 }
 
-.window2{
+.window2 {
     display: none;
 }
 
 .hidden {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
+    opacity: 0 !important;
+    pointer-events: none;
 }
 
-.title-shape1{
+.title-shape1 {
     color: #4CAF50;
 }
-.title-shape2{
-    color:#2196F3;
+.title-shape2 {
+    color: #2196F3;
 }
 
 .text-field {
@@ -127,8 +127,8 @@
 }
 
 .water-text-field1:focus,
-.water-text-field2:focus{
-    border-color:#2196F3;
+.water-text-field2:focus {
+    border-color: #2196F3;
 }
 
 .my-imc-button {
