@@ -1,47 +1,55 @@
 @media screen and (max-width: 880px) {
-    .logo{
-        width: 15%;
+    .logo {
+        width: 18%;
+        transition: width 0.3s ease-in-out;
     }
-    .footer{
+    .footer {
         margin-left: 20%;
         margin-right: 20%;
         background-color: rgba(255, 255, 255, 0.5);
     }
-    .footer-content{
+    .footer-content {
         font-size: 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .logo{
-        width: 33%;
+    .header{
+        margin-top: 3%;
+        left: 4%;
+        right: 5%;
+    }
+    .logo {
+        width: 30%;
     }
     .shape {
         margin-left: 3%;
         margin-right: 3%;
     }
-    .window, .window2{
+    .window, .window2 {
         margin-left: 1%;
         margin-right: 1%;
+        width: 320px;
     }
-    .footer{
+    .footer {
         margin-left: 5%;
         margin-right: 5%;
     }
 }
 
 @media screen and (max-width: 398px) {
-    .header{
+    .header {
         width: 87%;
-        left: 4.5%;
-        right: 5%;
+        margin: 0 auto;
+        margin-top: 4%;
     }
-    .button-container{
-        margin-left: 19%;
+    .button-container {
+        text-align: center;
     }
-    .logo{
-        width: 47%;
+    .logo {
+        width: 30%;
     }
-
+    .window,.window2{
+        width: 320px;
+    }
 }
-
