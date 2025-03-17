@@ -1,1 +1,47 @@
+@media screen and (max-width: 880px) {
+    .logo{
+        width: 15%;
+    }
+    .footer{
+        margin-left: 20%;
+        margin-right: 20%;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .footer-content{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo{
+        width: 33%;
+    }
+    .shape {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .window, .window2{
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .footer{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media screen and (max-width: 398px) {
+    .header{
+        width: 87%;
+        left: 4.5%;
+        right: 5%;
+    }
+    .button-container{
+        margin-left: 19%;
+    }
+    .logo{
+        width: 47%;
+    }
+
+}
 
