@@ -45,11 +45,15 @@
     background-color: #2196F3;
     transition: background-color 0.3s ease;
 }
+
 .header {
     position: fixed;
     top: 1.8%;
     left: 8%;
     right: 9%;
+    width: calc(83% - 20px); /* Largura fixa baseada nas margens */
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,9 +62,9 @@
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
-    height: 80px; /* Altura fixa para evitar distorções */
+    height: 80px;
     box-sizing: border-box;
-    transition: none; /* Para suavizar a transição da largura */
+    transition: none;
 }
 
 /* Shape (Conteúdo central) */
