@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     waterButton.addEventListener("click", function () {
-        this.classList.toggle('clicked');
         console.log("Botão Água clicado!");
         animarJanelas("water");
     });
