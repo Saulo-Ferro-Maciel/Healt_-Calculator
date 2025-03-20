@@ -26,7 +26,7 @@
         padding-right: 10px;
     }
     .logo {
-        width: 30%;
+        width: 0%;
     }
     .shape {
         margin-left: 3%;
@@ -57,9 +57,6 @@
     }
     .button-container {
         text-align: center;
-    }
-    .logo {
-        width: 30%;
     }
     .window, .window2 {
         width: 320px;
