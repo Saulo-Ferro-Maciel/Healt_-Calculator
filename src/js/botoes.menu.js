@@ -59,7 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let imcButton = document.querySelector(".imc-button");  // Botão do Header
     let waterButton = document.querySelector(".water-button"); // Botão do Header
 
-    if (!imcButton || !waterButton) {
+    let leftButton = document.querySelector(".left-button"); 
+    let rigthButton = document.querySelector(".right-button"); 
+
+    if (!imcButton || !waterButton || !leftButton || !rigthButton) {
         console.error("Os botões de alternância não foram encontrados.");
         return;
     }
@@ -73,4 +76,15 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Botão Água clicado!");
         animarJanelas("water");
     });
+
+    leftButton.addEventListener("click", function () {
+        console.log("Botão IMC clicado!");
+        animarJanelas("imc");
+    });
+
+    rigthButton.addEventListener("click", function () {
+        console.log("Botão Água clicado!");
+        animarJanelas("water");
+    });
+
 });

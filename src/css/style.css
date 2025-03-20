@@ -1,4 +1,37 @@
 /* Header */
+.header2 {
+    align-items: center;
+    text-align: center;
+    margin-bottom: -30%;
+    display: none;
+}
+
+.group {
+    margin-top: 15%;
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    max-width: 100%;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.514);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo2 {
+    width: 24%;
+}
+
+.title-container2 {
+    width: 40%;
+    text-align: left; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -135,7 +168,7 @@
     border-color: #2196F3;
 }
 
-.my-imc-button {
+.my-imc-button, .left-button {
     margin-top: 3%;
     background-color: #4CAF50;
     padding: 8px 12px;
@@ -145,7 +178,7 @@
     cursor: pointer;
 }
 
-.my-water-button {
+.my-water-button, .right-button {
     margin-top: 3%;
     background-color: #2196F3;
     padding: 8px 12px;
@@ -153,6 +186,14 @@
     border-radius: 5px;
     color: white;
     cursor: pointer;
+}
+
+.shape-buttons {
+    align-items: center;
+    text-align: center;
+    margin-top: -25px;
+    margin-bottom: 55px;
+    display: none;
 }
 
 /* Footer */
