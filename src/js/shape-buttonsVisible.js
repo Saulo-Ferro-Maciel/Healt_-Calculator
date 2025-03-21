@@ -1,19 +1,19 @@
-// Função para animar a saída do shape-buttons (baixo)
-function hideShapeButtons() {
-    const shapeButtons = document.querySelector(".shape-buttons");
+function isMobileDevice() {
+    return window.matchMedia("only screen and (max-width: 767px)").matches;
+}
 
+function hideShapeButtons() {
+    if (!isMobileDevice()) return; // Só executa se for um celular
+
+    const shapeButtons = document.querySelector(".shape-buttons");
     if (!shapeButtons) {
         console.error("Elemento .shape-buttons não encontrado.");
         return;
     }
 
-    // Remove classes de animação anteriores
     shapeButtons.classList.remove("animate__animated", "animate__fadeInUp");
-
-    // Adiciona animação de saída para baixo
     shapeButtons.classList.add("animate__animated", "animate__fadeOutDown");
 
-    // Após a animação, desativa o elemento
     shapeButtons.addEventListener("animationend", function handler() {
         shapeButtons.style.display = "none";
         shapeButtons.style.visibility = "hidden";
@@ -23,58 +23,35 @@ function hideShapeButtons() {
     }, { once: true });
 }
 
-// Função para animar a entrada do shape-buttons (de baixo)
 function showShapeButtons() {
-    const shapeButtons = document.querySelector(".shape-buttons");
+    if (!isMobileDevice()) return; // Só executa se for um celular
 
+    const shapeButtons = document.querySelector(".shape-buttons");
     if (!shapeButtons) {
         console.error("Elemento .shape-buttons não encontrado.");
         return;
     }
 
-    // Torna visível antes da animação
     shapeButtons.style.display = "block";
     shapeButtons.style.visibility = "visible";
     shapeButtons.style.pointerEvents = "auto";
-
-    // Remove classes de animação anteriores
     shapeButtons.classList.remove("animate__animated", "animate__fadeOutDown");
-
-    // Adiciona animação de entrada de baixo
     shapeButtons.classList.add("animate__animated", "animate__fadeInUp");
 }
 
-// Adiciona eventos aos botões
 document.addEventListener("DOMContentLoaded", () => {
+    if (!isMobileDevice()) return; // Só adiciona eventos se for um celular
+
     const imcButton = document.querySelector(".my-imc-button");
     const waterButton = document.querySelector(".my-water-button");
     const closeButton = document.querySelector(".fechar");
 
-    if (!imcButton) {
-        console.error("Botão .my-imc-button não encontrado.");
-        return;
-    }
-    if (!waterButton) {
-        console.error("Botão .my-water-button não encontrado.");
-        return;
-    }
-    if (!closeButton) {
-        console.error("Botão .fechar não encontrado.");
+    if (!imcButton || !waterButton || !closeButton) {
+        console.error("Um ou mais botões não foram encontrados.");
         return;
     }
 
-    // O my-imc-button ativa a saída do shape-buttons
-    imcButton.addEventListener("click", () => {
-        hideShapeButtons();
-    });
-
-    // O my-water-button também ativa a saída do shape-buttons
-    waterButton.addEventListener("click", () => {
-        hideShapeButtons();
-    });
-
-    // O fechar ativa a entrada do shape-buttons
-    closeButton.addEventListener("click", () => {
-        showShapeButtons();
-    });
+    imcButton.addEventListener("click", hideShapeButtons);
+    waterButton.addEventListener("click", hideShapeButtons);
+    closeButton.addEventListener("click", showShapeButtons);
 });
