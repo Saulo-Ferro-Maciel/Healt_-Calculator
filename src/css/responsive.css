@@ -49,6 +49,9 @@
         margin-right: 5%;
         opacity: 0.5;
     }
+    .fechar i {
+        font-size: 1.5em;
+    }
 }
 
 /* Media query para 398px */
