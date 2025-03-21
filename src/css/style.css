@@ -116,8 +116,82 @@
     margin-top: 8%;
 }
 
+.title-shape3{
+    font-style: bold;
+    font-size: 22px;
+    margin-top: 1%;
+}
+
+
+
+.windows3-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.circle-ring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px; /* Ajuste conforme necessário */
+    height: 90px; /* Mantenha igual à largura para ser um círculo */
+    border-radius: 50%;
+    border: 2px solid #c9bcbc; /* Ajuste conforme desejado */
+    overflow: hidden;
+  }
+  
+.image-imc {
+    width: 80%;
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Evita distorções */
+}
+
+.button.fechar {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px; /* Mantém o tamanho consistente */
+    height: 40px;
+    aspect-ratio: 1/1; /* Garante que o botão seja sempre um círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+.button.fechar:hover {
+    background-color: darkred;
+    transform: scale(1.1);
+}
+
+.button.fechar::after {
+    content: "Fechar Janela";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    bottom: 50px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.button.fechar:hover::after {
+    opacity: 1;
+}
+
 .window,
-.window2 {
+.window2,
+.window3 {
     width: 340px;
     height: 250px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -131,7 +205,7 @@
     text-align: center;
 }
 
-.window2 {
+.window2, .window3{
     display: none;
 }
 

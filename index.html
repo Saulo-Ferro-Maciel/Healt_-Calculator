@@ -35,6 +35,7 @@
       <link rel="stylesheet" href="./src/css/style.css"/>
       <link rel="stylesheet" href="./src/css/responsive.css"/>
       <!-- JS -->
+      <script defer type="module" src="./src/js/shape-buttonsVisible.js"></script>
       <script defer type="module" src="./src/js/main.js" ></script>
       <script defer type="module" src="./src/js/botoes.menu.js"></script>
       <script defer type="module" src="./src/js/calculo_imc.js"></script>
@@ -77,6 +78,18 @@
           <input type="number" class="text-field water-text-field1" placeholder="Peso (kg)" id="weight">
           <input type="number" class="text-field water-text-field2" placeholder="Altura (m)" id="height">
           <button class="button my-water-button">Calcule quantidade de água que preciso</button>
+        </div>
+        <div class="window3">
+            <div class="title-shape3">Seu IMC é: </div>
+            <div class="windows3-content">
+              <div class="circle-ring">
+                <img class="image-imc" src="./src/img/Magreza_IMC.png" alt="Magreza IMC">
+              </div>
+              <p class="status-imc"> Magreza</p>
+            </div> 
+            <button class="button fechar">
+              <i class="fa fa-window-close" aria-hidden="true"></i>
+            </button>             
         </div>
       </div>
 
