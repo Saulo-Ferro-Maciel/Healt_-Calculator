@@ -1,5 +1,5 @@
 function isMobileDevice() {
-    return window.matchMedia("only screen and (max-width: 678px)").matches;
+    return window.matchMedia("only screen and (max-width: 798px)").matches;
 }
 
 function hideShapeButtons() {
