@@ -2,9 +2,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Lista de URLs diretas das imagens do Unsplash
     const imagesMobile = [
+        "https://images.unsplash.com/photo-1511632765486-a01980e01a18",
         "https://images.unsplash.com/photo-1607962837359-5e7e89f86776",
         "https://images.unsplash.com/photo-1447452001602-7090c7ab2db3",
-        "https://images.unsplash.com/photo-1511632765486-a01980e01a18",
         "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0",
         "https://images.unsplash.com/photo-1517649763962-0c623066013b",
         "https://images.unsplash.com/photo-1554980555-7afb7c8795fe",
