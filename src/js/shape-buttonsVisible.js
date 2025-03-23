@@ -11,18 +11,13 @@ function hideShapeButtons() {
         return;
     }
 
-    // Remove animação de entrada, se presente
     shapeButtons.classList.remove("animate__animated", "animate__fadeInUp");
-    // Adiciona animação de saída
     shapeButtons.classList.add("animate__animated", "animate__fadeOutDown");
 
     shapeButtons.addEventListener("animationend", function handler() {
-        // Mantém o elemento no fluxo mas invisível
         shapeButtons.style.opacity = "0";
         shapeButtons.style.visibility = "hidden";
         shapeButtons.style.pointerEvents = "none";
-        // Opcional: se precisar remover do fluxo sem "salto", use position
-        // shapeButtons.style.position = "absolute";
         shapeButtons.classList.remove("animate__animated", "animate__fadeOutDown");
         shapeButtons.removeEventListener("animationend", handler);
     }, { once: true });
@@ -37,7 +32,6 @@ function showShapeButtons() {
         return;
     }
 
-    // Restaura o estado visível
     shapeButtons.style.opacity = "1";
     shapeButtons.style.visibility = "visible";
     shapeButtons.style.pointerEvents = "auto";
@@ -51,8 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const imcButton = document.querySelector(".my-imc-button");
     const waterButton = document.querySelector(".my-water-button");
     const closeButton = document.querySelector(".fechar");
+    const closeButton2 = document.querySelector(".fechar2");
 
-    if (!imcButton || !waterButton || !closeButton) {
+    if (!imcButton || !waterButton || !closeButton || !closeButton2) {
         console.error("Um ou mais botões não foram encontrados.");
         return;
     }
@@ -60,4 +55,5 @@ document.addEventListener("DOMContentLoaded", () => {
     imcButton.addEventListener("click", hideShapeButtons);
     waterButton.addEventListener("click", hideShapeButtons);
     closeButton.addEventListener("click", showShapeButtons);
+    closeButton2.addEventListener("click", showShapeButtons);
 });
