@@ -14,7 +14,7 @@ function abrirWindow4() {
         return;
     }
 
-    // Remove animações anteriores para reiniciar ao clicar novamente
+    // Remove animações anteriores
     win2.classList.remove("animate__fadeInRight", "animate__fadeOutRight");
     win4.classList.remove("animate__fadeInLeft", "animate__fadeOutLeft");
 
@@ -22,22 +22,23 @@ function abrirWindow4() {
     void win2.offsetWidth;
     void win4.offsetWidth;
 
-    // Esconde e desativa window2 com animação
+    // 1️⃣ Primeiro, anima a saída de window2 pela direita
     win2.classList.add("animate__animated", "animate__fadeOutRight");
     win2.style.pointerEvents = "none";
 
     setTimeout(() => {
+        // Esconde window2 após a animação de saída
         win2.classList.add("hidden");
         win2.style.visibility = "hidden";
         win2.style.display = "none";
         win2.classList.remove("animate__animated", "animate__fadeOutRight");
-    }, 1000);
 
-    // Exibe window4 pela esquerda
-    win4.classList.remove("hidden");
-    win4.style.visibility = "visible";
-    win4.style.display = "block";
-    win4.classList.add("animate__animated", "animate__fadeInLeft");
+        // 2️⃣ Agora, exibe window4 com animação pela esquerda
+        win4.classList.remove("hidden");
+        win4.style.visibility = "visible";
+        win4.style.display = "block";
+        win4.classList.add("animate__animated", "animate__fadeInLeft");
+    }, 500); // Espera 500ms para garantir que window2 sumiu antes de window4 aparecer
 
     // Cálculo da quantidade de água
     const peso = parseFloat(pesoInput.value);
@@ -78,18 +79,19 @@ function fecharWindow4() {
         return;
     }
 
-    // Remove animações anteriores para evitar conflitos
+    // Remove animações anteriores
     win2.classList.remove("animate__fadeInRight", "animate__fadeOutRight");
     win4.classList.remove("animate__fadeInLeft", "animate__fadeOutLeft");
 
-    // Força um reflow para garantir que a animação será reiniciada
+    // Força um reflow para resetar a animação
     void win2.offsetWidth;
     void win4.offsetWidth;
 
-    // Anima a saída de window4 pela esquerda
+    // 1️⃣ Primeiro, anima a saída de window4 pela esquerda
     win4.classList.add("animate__animated", "animate__fadeOutLeft");
 
     setTimeout(() => {
+        // Esconde window4 após a animação de saída
         win4.classList.add("hidden");
         win4.style.visibility = "hidden";
         win4.style.display = "none";
@@ -103,13 +105,13 @@ function fecharWindow4() {
             win1.classList.remove("animate__fadeInLeft", "animate__fadeOutLeft");
         }
 
-        // Reativa e exibe apenas window2 pela direita
+        // 2️⃣ Agora, exibe window2 com animação pela direita
         win2.classList.remove("hidden");
         win2.style.visibility = "visible";
         win2.style.display = "block";
         win2.style.pointerEvents = "auto";
         win2.classList.add("animate__animated", "animate__fadeInRight");
-    }, 500);
+    }, 500); // Espera 500ms para garantir que window4 sumiu antes de window2 aparecer
 }
 
 // Adiciona evento ao botão my-water-button
