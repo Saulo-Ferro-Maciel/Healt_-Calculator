@@ -208,6 +208,10 @@
     text-align: center;
 }
 
+.window3{
+    position: relative;
+}
+
 .window2, .window3{
     display: none;
 }
