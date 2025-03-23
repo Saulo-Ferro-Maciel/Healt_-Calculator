@@ -1,3 +1,4 @@
+// Função para alternar entre as janelas com animações
 function animarJanelas(janelaMostrar) {
     let win1 = document.querySelector(".window");  // Calculadora IMC
     let win2 = document.querySelector(".window2"); // Calculadora de Água
@@ -31,14 +32,12 @@ function animarJanelas(janelaMostrar) {
             win2.classList.add("hidden");
             win2.style.visibility = "hidden";
             win2.style.display = "none";
-            win2.style.pointerEvents = "none"; // 🔥 Desativa win2 quando oculto
 
             // Exibe win1
             win1.classList.remove("hidden");
             win1.style.visibility = "visible";
             win1.style.display = "block";
             win1.style.position = "relative"; // Garante alinhamento correto
-            win1.style.pointerEvents = "auto"; // 🔥 Reativa os botões de win1
             win1.classList.add("animate__animated", "animate__fadeInLeft");
         }, 500);
     } 
@@ -53,15 +52,49 @@ function animarJanelas(janelaMostrar) {
             win1.classList.add("hidden");
             win1.style.visibility = "hidden";
             win1.style.display = "none";
-            win1.style.pointerEvents = "none"; // 🔥 Desativa win1 quando oculto
 
             // Exibe win2
             win2.classList.remove("hidden");
             win2.style.visibility = "visible";
             win2.style.display = "block";
             win2.style.position = "relative"; // Garante alinhamento correto
-            win2.style.pointerEvents = "auto"; // 🔥 Reativa os botões de win2
+            win2.style.pointerEvents = "auto"; // 🔥 Reativa os botões!
             win2.classList.add("animate__animated", "animate__fadeInRight");
         }, 500);
     }
 }
+
+// Adiciona eventos aos botões
+document.addEventListener("DOMContentLoaded", function () {
+    let imcButton = document.querySelector(".imc-button");  // Botão do Header
+    let waterButton = document.querySelector(".water-button"); // Botão do Header
+
+    let leftButton = document.querySelector(".left-button"); 
+    let rigthButton = document.querySelector(".right-button"); 
+
+    if (!imcButton || !waterButton || !leftButton || !rigthButton) {
+        console.error("Os botões de alternância não foram encontrados.");
+        return;
+    }
+
+    imcButton.addEventListener("click", function () {
+        console.log("Botão IMC clicado!");
+        animarJanelas("imc");
+    });
+
+    waterButton.addEventListener("click", function () {
+        console.log("Botão Água clicado!");
+        animarJanelas("water");
+    });
+
+    leftButton.addEventListener("click", function () {
+        console.log("Botão IMC clicado!");
+        animarJanelas("imc");
+    });
+
+    rigthButton.addEventListener("click", function () {
+        console.log("Botão Água clicado!");
+        animarJanelas("water");
+    });
+
+});
