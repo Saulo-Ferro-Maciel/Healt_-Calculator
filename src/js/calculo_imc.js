@@ -80,7 +80,7 @@ function abrirWindow3() {
         advice = 'Procure ajuda médica para um plano de perda de peso e acompanhamento profissional.';
     } else {
         statusText = `Obesidade Grau III<br>IMC: ${imc}`;
-        imgSrc = './src/img/obeso.png';
+        imgSrc = './src/img/obeso3.png';
         advice = 'Procure orientação médica urgente para evitar complicações de saúde.';
     }
 
