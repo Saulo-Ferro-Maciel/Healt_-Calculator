@@ -120,7 +120,6 @@
 .title-shape3{
     font-style: bold;
     font-size: 22px;
-    margin-top: 1%;
 }
 
 
@@ -137,17 +136,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90px; /* Ajuste conforme necessário */
-    height: 90px; /* Mantenha igual à largura para ser um círculo */
+    width: 85px; /* Ajuste conforme necessário */
+    height: 85px; /* Mantenha igual à largura para ser um círculo */
     border-radius: 50%;
     border: 2px solid #c9bcbc; /* Ajuste conforme desejado */
     overflow: hidden;
-  }
+}
   
 .image-imc {
-    width: 80%;
+    width: 90%;
     height: auto; /* Mantém a proporção da imagem */
     object-fit: contain; /* Evita distorções */
+    opacity: 0.87;
 }
 
 .button.fechar {
@@ -163,12 +163,15 @@
     align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    position: relative;
+    position: absolute; /* Mudado de relative para absolute */
+    right: 10px; /* Distância da borda direita, ajuste conforme necessário */
+    top: 10px; /* Distância do topo, ajuste conforme necessário */
 }
 
 .button.fechar:hover {
     background-color: darkred;
     transform: scale(1.1);
+    content: "Fechar Janela";
 }
 
 .button.fechar::after {
