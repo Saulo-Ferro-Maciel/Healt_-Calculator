@@ -49,7 +49,7 @@ input[type="number"] {
     -moz-appearance: textfield; /* Faz o campo parecer um texto normal */
 }
 
-.window, .window2 {
+.window, .window2, .window3, .window4 {
     width: 100%; /* Garante que as janelas ocupem apenas a largura disponível */
     max-width: 100%; /* Evita que ultrapassem o contêiner pai */
     overflow: hidden; /* Impede overflow interno nas janelas */

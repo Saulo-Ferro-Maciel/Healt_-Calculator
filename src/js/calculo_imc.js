@@ -42,7 +42,9 @@ function abrirWindow3() {
     let altura = parseFloat(alturaInput.value);
 
     if (isNaN(peso) || isNaN(altura)) {
+        titleShape3.innerHTML="Seu IMC é:"
         status.textContent = "Por favor, insira valores numéricos válidos para peso e altura.";
+        img.src='./src/img/Magreza_IMC.png';
         return;
     }
 

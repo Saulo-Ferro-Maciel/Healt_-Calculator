@@ -194,7 +194,8 @@
 
 .window,
 .window2,
-.window3 {
+.window3,
+.window4{
     width: 340px;
     height: 250px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -212,7 +213,7 @@
     position: relative;
 }
 
-.window2, .window3{
+.window2, .window3, .window4{
     display: none;
 }
 
