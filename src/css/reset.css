@@ -2,6 +2,7 @@
     margin: 0; padding: 0;
     font-family: "Raleway";
     list-style: none;
+    overflow-x: hidden;
 }
 
 body {
@@ -16,6 +17,23 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     transition: background-image 1s ease-in-out;
+    position: relative; /* Necessário para o pseudo-elemento */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(43, 42, 42, 0.25); 
+    z-index: 1; /* Coloca a camada de escurecimento acima do fundo */
+}
+
+body > * {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima da camada de escurecimento */
 }
 
 /* Remove os spinners em navegadores WebKit (Chrome, Edge, Safari) */
@@ -29,4 +47,12 @@ input[type="number"]::-webkit-outer-spin-button {
 /* Remove os spinners no Firefox */
 input[type="number"] {
     -moz-appearance: textfield; /* Faz o campo parecer um texto normal */
+}
+
+.window, .window2 {
+    width: 100%; /* Garante que as janelas ocupem apenas a largura disponível */
+    max-width: 100%; /* Evita que ultrapassem o contêiner pai */
+    overflow: hidden; /* Impede overflow interno nas janelas */
+    top: 0;
+    left: 0;
 }

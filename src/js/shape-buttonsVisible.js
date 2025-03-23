@@ -11,13 +11,18 @@ function hideShapeButtons() {
         return;
     }
 
+    // Remove animação de entrada, se presente
     shapeButtons.classList.remove("animate__animated", "animate__fadeInUp");
+    // Adiciona animação de saída
     shapeButtons.classList.add("animate__animated", "animate__fadeOutDown");
 
     shapeButtons.addEventListener("animationend", function handler() {
-        shapeButtons.style.display = "none";
+        // Mantém o elemento no fluxo mas invisível
+        shapeButtons.style.opacity = "0";
         shapeButtons.style.visibility = "hidden";
         shapeButtons.style.pointerEvents = "none";
+        // Opcional: se precisar remover do fluxo sem "salto", use position
+        // shapeButtons.style.position = "absolute";
         shapeButtons.classList.remove("animate__animated", "animate__fadeOutDown");
         shapeButtons.removeEventListener("animationend", handler);
     }, { once: true });
@@ -32,7 +37,8 @@ function showShapeButtons() {
         return;
     }
 
-    shapeButtons.style.display = "block";
+    // Restaura o estado visível
+    shapeButtons.style.opacity = "1";
     shapeButtons.style.visibility = "visible";
     shapeButtons.style.pointerEvents = "auto";
     shapeButtons.classList.remove("animate__animated", "animate__fadeOutDown");

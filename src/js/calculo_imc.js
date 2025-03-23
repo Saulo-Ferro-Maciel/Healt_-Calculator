@@ -7,8 +7,9 @@ function abrirWindow3() {
     let alturaInput = document.querySelector(".imc-text-field2");
     let status = document.querySelector(".status-imc");
     let img = document.querySelector(".image-imc");
+    let titleShape3 = document.querySelector(".title-shape3");
 
-    if (!win1 || !win2 || !win3 || !pesoInput || !alturaInput || !status || !img) {
+    if (!win1 || !win2 || !win3 || !pesoInput || !alturaInput || !status || !img || !titleShape3) {
         console.error("Alguns elementos não foram encontrados.");
         return;
     }
@@ -27,6 +28,7 @@ function abrirWindow3() {
         win1.classList.add("hidden");
         win1.style.visibility = "hidden";
         win1.style.display = "none";
+        win1.classList.remove("animate__animated", "animate__fadeOutLeft"); // Limpa a animação após completar
     }, 500);
 
     // Exibe window3 pela direita
@@ -44,7 +46,7 @@ function abrirWindow3() {
         return;
     }
 
-    if (altura > 3) {  
+    if (altura > 3) {
         altura = altura / 100;
     }
 
@@ -53,10 +55,13 @@ function abrirWindow3() {
     let imgSrc = '';
     let advice = '';
 
+    // Define o título como "Seu IMC é:" quando o cálculo é realizado
+    titleShape3.textContent = "Seu IMC é:";
+
     if (imc < 18.5) {
         statusText = `Magreza<br>IMC: ${imc}`;
         imgSrc = './src/img/Magreza_IMC.png';
-        advice = 'Você está abaixo do peso recomendado. É importante consultar um nutricionista para ajustar sua alimentação.';
+        advice = 'Você está abaixo do peso. É importante consultar o nutricionista para ajustar sua alimentação.';
     } else if (imc >= 18.5 && imc <= 24.9) {
         statusText = `Peso Normal<br>IMC: ${imc}`;
         imgSrc = './src/img/normal_IMC.png';
@@ -64,7 +69,7 @@ function abrirWindow3() {
     } else if (imc >= 25 && imc <= 29.9) {
         statusText = `Sobrepeso<br>IMC: ${imc}`;
         imgSrc = './src/img/sobrepeso_IMC.png';
-        advice = 'Tente adotar hábitos saudáveis, como uma alimentação equilibrada e a prática regular de atividades físicas.';
+        advice = 'Adote hábitos saudáveis, como alimentação equilibrada e prática regular de atividades físicas.';
     } else if (imc >= 30 && imc <= 34.9) {
         statusText = `Obesidade Grau I<br>IMC: ${imc}`;
         imgSrc = './src/img/obeso.png';
@@ -106,6 +111,7 @@ function fecharWindow3() {
         win3.classList.add("hidden");
         win3.style.visibility = "hidden";
         win3.style.display = "none";
+        win3.classList.remove("animate__animated", "animate__fadeOutRight"); // Limpa a animação após completar
         
         // Reativa e exibe window1 pela esquerda
         win1.classList.remove("hidden");

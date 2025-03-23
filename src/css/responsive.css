@@ -48,9 +48,10 @@
         margin-left: 5%;
         margin-right: 5%;
         opacity: 0.5;
+        margin-bottom: 2.5%;
     }
     .fechar i {
-        font-size: 1.5em;
+        font-size: 1.25em;  
     }
 }
 

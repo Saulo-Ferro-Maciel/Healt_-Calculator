@@ -98,6 +98,7 @@
     height: 80px;
     box-sizing: border-box;
     transition: none;
+    overflow: hidden;
 }
 
 /* Shape (Conteúdo central) */
