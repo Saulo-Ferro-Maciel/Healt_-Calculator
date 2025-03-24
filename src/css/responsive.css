@@ -140,6 +140,7 @@
     .footer-content {
         font-size: 20px;
     }
+    
 }
 
 /* Media query para 480px */
@@ -180,6 +181,9 @@
     .fechar i {
         font-size: 1.25em;  
     }
+    .button-container {
+        width: 475px;
+    }
 }
 
 /* Media query para 398px */
@@ -188,3 +192,4 @@
         width: 320px;
     }
 }
+

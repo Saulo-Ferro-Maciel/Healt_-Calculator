@@ -64,3 +64,59 @@ buttons.forEach(button => {
         }, 180);
     });
 });
+
+
+// Função para verificar o tipo de dispositivo
+function detectDeviceType() {
+    const width = window.innerWidth;
+
+    const isMobile = width < 600; // Dispositivos móveis (smartphones)
+    const isDesktop = width >= 1024; // Laptops e desktops
+
+    console.log(`Width: ${width}, IsMobile: ${isMobile}, IsDesktop: ${isDesktop}`);
+    return { isMobile, isDesktop };
+}
+
+// Função para ajustar o button-container e o texto do imc-button
+function adjustButtonContainerAndText() {
+    const buttonContainer = document.querySelector(".button-container");
+    const imcButton = document.querySelector(".imc-button");
+
+    // Verificar se os elementos foram encontrados
+    if (!buttonContainer || !imcButton) {
+        console.error("Um ou mais elementos não foram encontrados:", {
+            buttonContainer: !!buttonContainer,
+            imcButton: !!imcButton
+        });
+        return;
+    }
+
+    const { isMobile, isDesktop } = detectDeviceType();
+
+    // Ajustar a largura do button-container em dispositivos móveis
+    if (isMobile) {
+        buttonContainer.style.width = "580px";
+    } else {
+        buttonContainer.style.width = "";
+    }
+
+    // Ajustar o texto do imc-button
+    if (isMobile) {
+        imcButton.textContent = "IMC"; // Texto para dispositivos móveis
+    } else if (isDesktop) {
+        imcButton.textContent = "Calcular IMC"; // Texto para laptops/desktops
+    }
+    // Para dispositivos intermediários (ex.: tablets), o texto não é alterado
+}
+
+// Executar a função ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("DOM carregado, ajustando button-container e texto do imc-button...");
+    adjustButtonContainerAndText();
+});
+
+// Executar a função ao redimensionar a janela
+window.addEventListener("resize", () => {
+    console.log("Janela redimensionada, ajustando button-container e texto do imc-button...");
+    adjustButtonContainerAndText();
+});
