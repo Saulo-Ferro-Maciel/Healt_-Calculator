@@ -1,5 +1,132 @@
-/* Media Queries */
-/* Media query para 880px (sem alterações no header) */
+@media (min-height: 823px) and (orientation: portrait) {
+    .header {
+        display: none;
+    }
+    .header2 {
+        display: block;
+        width: 70%; 
+        padding: 10px; 
+        border-radius: 0px; 
+        margin: 0 auto; 
+        text-align: center; 
+        font-size: 20px;
+        margin-top: 5%;
+    }
+    .logo2 {
+        width: 14%;
+        transition: width 0.3s ease-in-out;
+    }
+    .shape-buttons {
+        display: block;
+        position: relative; /* Necessário para o top funcionar */
+        top: -35%; 
+    }
+    .shape-buttons > * {
+        transform: scale(1.55); /* Aumenta o tamanho dos filhos em 15% */
+        margin: 35px;
+    }
+    .footer {
+        margin-left: 5%;
+        margin-right: 5%;
+        opacity: 0.5;
+        margin-bottom: 2.5%;
+    }
+}
+
+/* Estilos exclusivos para telas de 720 x 1600 pixels */
+@media only screen and (width: 720px) and (height: 1600px) {
+    .header {
+        display: none;
+    }
+    .header2 {
+        display: block;
+        width: 70%; 
+        padding: 10px; 
+        border-radius: 0px; 
+        margin: 0 auto; 
+        text-align: center; 
+        font-size: 22px;
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
+    .logo2 {
+        width: 19%;
+        transition: width 0.3s ease-in-out;
+    }
+    .shape-buttons {
+        display: block;
+        position: relative; /* Necessário para o top funcionar */
+        top: -35%; /* Diminui a posição do topo em 5% */
+    }
+    
+    /* Para os elementos filhos */
+    .shape-buttons > * {
+        transform: scale(1.55); /* Aumenta o tamanho dos filhos em 15% */
+        margin: 35px;
+    }
+    .group {
+        width: 80%; 
+        max-width: 90%;
+        text-align: center;
+        /*background-color: aquamarine;*/
+    }
+    .shape {
+        display: block;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: fit-content;
+    }
+
+    .title-shape1,.title-shape2,.title-shape3,.title-shape4{
+        font-size: 28px;
+        margin-top: -10%;
+    }
+
+    .window, .window2, .window3,.window4 {
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 520px; height: 450px;
+        opacity: 0.8;
+
+        box-sizing: border-box;
+        padding: 20px;
+        margin-top: 25%;
+    }
+    
+    .window > *, .window2 > *, .window3 > *, .window4 > * {
+        width: 100%;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+    
+    .window input, .window2 input, .window3 input, .window4 input,
+    .window button, .window2 button, .window3 button, .window4 button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+    
+    .window h1, .window2 h1, .window3 h1, .window4 h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .footer {
+        margin-left: 5%;
+        margin-right: 5%;
+        opacity: 0.5;
+        margin-bottom: 2.5%;
+    }
+    p{
+        font-size: 23px;
+    }
+    .fechar i {
+        font-size: 1em;  
+    }
+    
+}
+
+/* Media query para 880px  */
 @media screen and (max-width: 880px) {
     .logo {
         width: 18%;
